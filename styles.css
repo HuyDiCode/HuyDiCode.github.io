@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 80px 300px;
+  background-color: #f4f7fc;
+}
+
+.content-description {
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.image-section {
+  padding: 80px 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+#image-container {
+  width: 100%;
+  display: grid;
+  row-gap: 50px;
+  column-gap: 30px;
+  grid-template-columns: repeat(4, auto);
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 #0000001a;
+}
+
+.image-link {
+  height: 250px;
+}
+
+.image {
+  position: relative;
+  z-index: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.image:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+.image-author {
+  text-decoration: none;
+  color: black;
+}
+.image-author:hover {
+  color: #738394;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.image-id {
+  padding: 5px 10px;
+  border-radius: 50px;
+  background-color: rgb(237, 242, 247);
+}
+
+#load-btn {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #f4f7fc;
+  border: 1px solid #e3e9f3;
+  color: #738394;
+  cursor: pointer;
+}
+
+#load-btn:hover {
+  background-color: #e3e9f3;
+  transition: background-color 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1450px) {
+  .content-section,
+  .image-section {
+    padding: 80px 60px;
+  }
+
+  #image-container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .content-section,
+  .image-section {
+    padding: 80px 20px;
+  }
+  #load-btn {
+    width: 100%;
+  }
+  #image-container {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .image-link {
+    height: 300px;
+  }
+  .image-section {
+    padding: 40px 20px;
+  }
+  .content-section {
+    padding: 80px 20px;
+  }
+
+  #image-container {
+    grid-template-columns: auto;
+  }
+}
