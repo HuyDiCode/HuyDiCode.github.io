@@ -1,1 +1,1 @@
-[Deploy link](ttps://huydicode.github.io/Masonry-Grid/)
+[Deploy link](https://huydicode.github.io/Masonry-Grid/)
