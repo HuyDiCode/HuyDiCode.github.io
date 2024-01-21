@@ -20,6 +20,11 @@ const createImageElement = (element) => {
 
   const image = document.createElement("img");
   image.className = "image";
+  image.src = "";
+  image.classList.add("loading");
+  image.addEventListener("load", () => {
+    image.classList.remove("loading");
+  });
   image.src = element.download_url;
 
   imageLink.appendChild(image);
